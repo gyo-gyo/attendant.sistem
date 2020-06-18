@@ -11,6 +11,10 @@
 
     <header> 出席確認</header>
     <form method="POST" action="Attendant_teacher_check.php">
+        <div>
+            <label>日付：</label>
+            <input type="date" name="deadline">
+        </div>
         <select name="class" id="class" size="5" multiple>
             <option value="開発経済論" name="kaihatu">開発経済論</option>
             <option value="三年専門ゼミナール" name="zemi">三年専門ゼミナール</option>

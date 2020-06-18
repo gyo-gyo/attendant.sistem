@@ -26,6 +26,10 @@
                 <label>名前を入力してください：</label>
                 <input type="text" name="name" />
             </div>
+            <div>
+                <label>日付：</label>
+                <input type="date" name="deadline">
+            </div>
         </div>
         <input type="submit" value="送信" />
     </form>

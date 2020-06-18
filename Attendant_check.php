@@ -3,19 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    
+
     <title>出席確認しました</title>
 </head>
 
 <body>
     <?php
+    $deadline = $_POST["deadline"];
     $class = $_POST["class"];
     $number = $_POST["number"];
     $name = $_POST["name"];
-    $write_data = array($number, $class);
-    echo ($number . ':' . $name . 'の' . $class . 'の出席を受け付けました。');
+    $write_data = array($deadline, $number, $class);
 
-    $file = fopen('./data/' . $class . '.csv', 'a');
+    echo ($deadline . ':' . $number . ':' . $name . 'の' . $class . 'の出席を受け付けました。');
+
+    $file = fopen('./data/' . $deadline . $class . '.csv', 'a');
     // ファイルロックの処理
     flock($file, LOCK_EX);
     // ファイル書き込み処理
